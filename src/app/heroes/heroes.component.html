@@ -1,0 +1,28 @@
+<h2>My Heroes</h2>
+
+<!-- <ul class="heroes">
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul> -->
+<ul class="heroes">
+  <li [class.selected]="hero === selectedHero" *ngFor="let hero of heroes" (click)="onSelect(hero)" >{{hero.id}}  {{hero.name}}</li>
+</ul>
+
+<!-- 放到下面子元件 -->
+<!-- <ng-container *ngIf="selectedHero">
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+  </div>
+</ng-container> -->
+
+<!--
+  父層傳入selectedHero選到的英雄
+  子層用 heroPro 接收 selectedHero 物件
+-->
+<app-hero-detail [heroPro]="selectedHero"></app-hero-detail>
