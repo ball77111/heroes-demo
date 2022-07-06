@@ -1,3 +1,9 @@
+# Angular-hero-demo : [Github](https://ball77111.github.io/heroes-demo/#/back)
+
+實作angular 英雄之旅範例 並上傳到github-pages
+
+
+---
 # AngularTourOfHeroes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
